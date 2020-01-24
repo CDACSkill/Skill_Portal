@@ -1,0 +1,58 @@
+.Login{
+    width: 280px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+}
+#regist
+{
+color: #2de2d1 ;
+}
+#back {
+    margin: 0;
+    padding: 0;
+    background-image: url(/assets/images/skill.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+.textbox{
+    width: 100%;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 8px 0;
+    margin: 8px 0;
+    border-bottom: 1px solid #2de2d1;
+    
+}
+::placeholder {
+  color: antiquewhite;
+  opacity: 1; /* Firefox */
+}
+.textbox i{
+    width: 25px;
+    float: left;
+    text-align: center;
+}
+.textbox input{
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 18px;
+    width: 80%;
+    float: left;
+    margin:0 10px;
+}
+.btn{
+    width: 40%;
+    background: none;
+    border: 2px solid #2de2d1;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 12px;
+
+}

@@ -1,0 +1,47 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<div>
+<nav class="navbar sticky-top navbar-dark" style="background-color: darkgray;">
+        <span class="navbar-brand mb-0 h1"><img src="./assets/images/logo.png"> </span>
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <img class="img-responsive" src="./assets/images/profile.png" />&nbsp;&nbsp;
+           <span> 
+                <a href="" (click)="logout()">Logout</a></span></li>
+        </ul>
+</nav>
+</div>
+
+<div class="wrapper">
+    <aside class="main_sidebar">
+        <div>
+
+        <ul>
+            <li><a [routerLink]="[{outlets:{sidebaroutlet:['dashboard-main']}}]" routerLinkActive="active"><img src="./assets/images/dashboard.png">DashBoard</a></li>
+            <li><a [routerLink]="[{outlets:{sidebaroutlet:['skills']}}]" routerLinkActive="active" data-parent="#sidebar"><img src ="./assets/images/skills.png">Skills</a></li>
+            <li><a  [routerLink]="[{outlets:{sidebaroutlet:['Certification']}}]" routerLinkActive="active" data-parent="#sidebar"><img src ="./assets/images/certifications.png">Certificates</a></li>
+            <li><a  [routerLink]="[{outlets:{sidebaroutlet:['Training']}}]" routerLinkActive="active" data-parent="#sidebar"><img src ="./assets/images/training.png">Training</a></li>
+        </ul>
+    </div>
+    </aside> 
+    <div class="col-10 offset-2 main" id="main-content">
+        <router-outlet name ='sidebaroutlet'></router-outlet>
+       
+      </div>
+    
+</div> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

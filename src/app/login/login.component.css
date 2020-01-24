@@ -1,0 +1,19 @@
+#back {
+    margin: 0;
+    padding: 0;
+    background-image: url(/assets/images/skill.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #login .container #login-row #login-column  {
+    margin-top: 200px;
+    max-width: 400px;
+    height: 300px;
+  }
+  #login .container #login-row #login-column #login-box #login-form {
+    padding: 20px;
+  }
+  #login .container #login-row #login-column #login-box #login-form #register-link {
+    margin-top: -85px;
+  }

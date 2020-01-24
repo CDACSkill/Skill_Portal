@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-md-9">
+    <h5>
+     Certification You Received
+    </h5>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12 table-responsive-md">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Certification Name</th>
+          <th scope="col">Institution</th>
+          <th scope="col">Received on</th>
+          <th scope="col">Expire on</th>
+        </tr>
+      </thead>
+    <tbody>
+        <tr *ngFor="let certificate of mycertificate">
+          <td>{{certificate.certification}}</td>
+          <td>{{certificate.institution}}</td>
+          <td>{{certificate.receivedon}}</td>
+          <td>{{certificate.expireon}}</td>
+        </tr>
+    </tbody>
+  </table>
+  </div>
+  </div>
+  
+
+ 

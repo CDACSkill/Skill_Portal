@@ -1,0 +1,18 @@
+
+<form id="control" class="form  ">
+    <div class="form-group">
+      <label for="skillname">Skill Name</label>
+      <input [(ngModel)]="skillname" type="text" name="skillname" class="form-control" id="skillname" placeholder="Enter Skill Name">
+    </div>
+    <div class="form-group">
+      <label for="skillgroup">Skill Group</label>
+      <input [(ngModel)]="skillgroup" type="text" class="form-control" name="skillgroup" id="skillgroup" placeholder="Enter Skill Group">
+    </div>
+    <div class="form-group">
+      <label for="rating">Rating</label>
+      <input [(ngModel)]="rating" type="text" class="form-control" name="rating" id="rating" placeholder="Enter Rating">
+     
+    </div> 
+    <button type="submit" (click)="addSkill()" class="btn btn-primary">Add</button>
+    <p>{{status}}</p>
+</form>

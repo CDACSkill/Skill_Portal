@@ -1,0 +1,36 @@
+<!-- <div class="row p-3"></div> -->
+<div class="row">
+  <div class="col-12 table-responsive-md">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Training Name</th>
+          <th scope="col">Date</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor = "let training of availtraining; let i=index">
+          <td>{{training.trainingName}}</td>
+          <td>{{training.date}}</td>
+          <td>
+            <button type="button" class="btn btn-success" (click)="enrollTraining(i)">Enroll Training</button>
+          </td>
+        </tr>
+      </tbody>
+    
+  <div>
+    </div>
+
+    <ng-template #content let-c="close" let-d="dismiss">
+      <div class="modal-header">
+        <h4 class="modal-title">Offer a Training</h4>
+      </div>
+      <div class="modal-body">
+        <app-add-training #form (saveClicked)="c('Cross click')" [trainingDomain]=trainingDomainToSend></app-add-training>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="('Close click')">Close</button>
+      </div>
+    </ng-template>
+

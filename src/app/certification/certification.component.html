@@ -1,0 +1,22 @@
+<div class="container-fluid" style="width: 90%; margin-top: 100px;">
+
+  <h1>Certification</h1>
+  <div class="col-12">
+    <ul id="certification-nav" class="nav nav-tabs justify-content-center" style="cursor:pointer">
+      <li class="nav-item">  
+         <a id="mycertifications" class="nav-link" [routerLink]="[{outlets:{certificateoutlet:['MyCertification']}}]" routerLinkActive="active"> 
+          My Certifications
+        </a>
+      </li>
+      <li class="nav-item">
+
+        <a id="availablecertifications" class="nav-link" [routerLink]="[{outlets:{certificateoutlet:['AvailableCertification']}}]" routerLinkActive="active"> 
+           
+            Available Certifications
+        </a>
+      </li>
+    </ul>
+  </div>   
+  </div>
+  <router-outlet name="certificateoutlet"></router-outlet>
+

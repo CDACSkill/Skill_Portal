@@ -1,0 +1,28 @@
+
+<div class="row">
+  <div class="col-12 table-responsive-md">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Training Name</th>
+          <th scope="col">Date</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor = "let training of trainings; let i=index">
+          <td>{{training.trainingName}}</td>
+          <td>{{training.date}}</td>
+          <td>
+            <button type="button" (click)="delete(i)" class="btn btn-danger">Cancel Enroll</button>
+          </td>
+        </tr>
+      </tbody>
+  
+
+  <div>
+    <router-outlet (activate)='onActivate($event)'></router-outlet>
+  </div>
+  </table>
+  </div>
+  </div>

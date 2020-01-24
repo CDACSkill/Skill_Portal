@@ -1,0 +1,80 @@
+
+<div class="container-fluid" style="width: 90%; margin-top: 100px;">
+
+  <h1>Skills</h1>
+
+  <div class="col-md-8 align-middle" style="top: 35px;" id="header">
+    <h2 id="textHeader">Your Skill List
+    </h2>
+  </div>
+  <div class="float-right">
+
+    <button id="back-to-modelSkill" (click)="open(content)" class="btn btn-primary right mt-2">
+      Add New Skill
+    </button>
+  </div>
+
+
+
+  
+
+<!-- Add New Skill -->
+<ng-template #content let-c="close" let-d="dismiss">
+<div class="modal-header">
+    <h4 class="modal-title">Add New Skill</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">  
+    <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+<app-add-new-skills #form (saveClicked)="c('Cross click')"></app-add-new-skills>
+</div>
+</ng-template>
+
+<!-- update rating -->
+<ng-template #content1 let-c="close" let-d="dismiss">
+<div class="modal-header">
+    <h4 class="modal-title">Update Your Rating</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">  
+    <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+<app-update-skill #form (saveClicked)="c('Cross click')"></app-update-skill>
+</div>
+</ng-template>
+
+
+<table class="table table-responsive-md">
+<thead>
+  <tr>
+    <th>Skill Name</th>
+    <th>Skill Group</th>
+    <th>Rating</th>
+    <th></th>
+  </tr>
+</thead>
+<tbody >
+  <tr *ngFor="let skill of skills;let i=index">
+    <td>{{skill.skillname}}</td>
+    <td>{{skill.skillgroup}}</td>
+    <td>{{skill.rating}}</td>
+  
+  <td>
+    <div class="float-right">
+
+      <button id="back-to-modelSkill" (click)="open1(content1,i)" class="btn btn-primary right mt-2">
+        Update
+      </button>
+    
+    </div>
+
+    </td>
+  </tr>
+</tbody>
+</table>
+
+    </div>
+<router-outlet name="skillsoutlet"></router-outlet>
+
+  
