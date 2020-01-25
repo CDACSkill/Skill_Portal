@@ -1,0 +1,76 @@
+
+<form id="control" class="form  ">
+    <div class="form-group">
+      <label for="skillname">Skill Name</label>
+      <input [disabled]="true" [(ngModel)]="skillname" type="text" name="skillname" class="form-control"  id="skillname" placeholder="Enter Skill Name">
+    </div>
+    <div class="form-group">
+      <label for="skillgroup">Skill Group</label>
+      <input [disabled]="true" [(ngModel)]="skillgroup" type="text" class="form-control" name="skillgroup" id="skillgroup" placeholder="Enter Skill Group">
+    </div>
+    <div class="form-group">
+        <label for="rating">Rating</label>
+        <ul>
+            <thead>
+              <tr>
+                <th>Qualification</th>
+                <th>Rating</th>
+              </tr>
+            </thead>
+               <tbody>
+                 <td>
+                    <tr>Book Knowledge</tr>
+                    <tr>Working Knowledge</tr>
+                    <tr>Project Knowledge</tr>
+                    <tr>Done Certification</tr>
+                    <tr>Presented White Papers</tr>
+                </td> &nbsp;      
+              <td>      
+               <tr>1</tr>
+               <tr>2</tr>
+               <tr>3</tr>
+               <tr>4</tr>
+               <tr>5</tr>
+              </td>
+            </tbody>
+          </ul>
+      <input [(ngModel)]="rating" type="text" class="form-control" name="rating" id="rating" placeholder="Enter Rating">
+     
+    </div> 
+    <button type="submit" (click)="submitRating(rating)"  class="btn btn-primary">Update</button>
+ <p>{{status}}</p>
+</form>
+<!-- <form id="control" class="form  ">
+    <div class="form-group">
+  <ul>
+    <thead>
+      <tr>
+        <th>Qualification</th>
+        <th>Rating</th>
+      </tr>
+    </thead>
+       <tbody>
+         <td>
+            <tr>Book Knowledge</tr>
+            <tr>Working Knowledge</tr>
+            <tr>Project Knowledge</tr>
+            <tr>Done Certification</tr>
+            <tr>Presented White Papers</tr>
+        </td>       
+      <td>      
+       <tr>1</tr>
+       <tr>2</tr>
+       <tr>3</tr>
+       <tr>4</tr>
+       <tr>5</tr>
+      </td>
+    </tbody>
+  </ul>
+     
+  
+  <input [(ngModel)]="rating" type="text" class="form-control" name="rating" id="rating" placeholder="Enter Rating">
+  
+      
+    </div> 
+    <button type="submit" (click)="submitRating(rating)" class="btn btn-primary">Update</button>
+  </form> -->

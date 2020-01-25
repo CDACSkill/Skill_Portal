@@ -1,0 +1,17 @@
+<div id="back">
+        <div class="Login">
+            <h1 id="regist">REGISTRATION</h1>
+            
+            <div class="textbox">
+                
+            <input type="text" [(ngModel)]="newuser" name="userid" placeholder="Enter UserId">
+            </div>
+            <div class="textbox">
+                
+            <input type="password"[(ngModel)]="newpassword" id="pas1" name="password" placeholder="Enter Password">
+            </div>
+            
+            <input type="button" (click)="register()" class="btn" name="submit" value="Register">
+           
+            </div>
+        </div>

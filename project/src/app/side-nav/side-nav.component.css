@@ -1,0 +1,27 @@
+body{
+    padding: 20px;
+}
+#mysidebar {
+   height: 100%;
+    width: 200px;
+    position: fixed;
+    background-color: #0292B7;
+    z-index: 1;
+top: 9%;
+left: 0;
+overflow-x: hidden;
+}
+#mysidebar a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    display: block;
+  }
+  a.nav-link:hover{
+      background-color: #1AC8DB;
+      opacity: 1;
+  }
+ .sidebar{
+     padding: 5px;
+ }

@@ -1,0 +1,26 @@
+<html>
+<head>
+
+</head>
+<body>
+
+  <router-outlet name="sidebaroutlet"></router-outlet>
+
+<nav id="mysidebar"class="sidebar">
+
+            <a class="nav-link" href="#">
+              Dashboard
+            </a>
+            <a class="nav-link" [routerLink]="[{outlets:{sidebaroutlet:['Skills']}}]">
+              Skills
+            </a>
+            <a class="nav-link" [routerLink]="[{outlets:{sidebaroutlet:['Certification']}}]">
+              Certification
+            </a>
+            <a class="nav-link" [routerLink]="[{outlets:{sidebaroutlet:['Training']}}]">
+              Training
+            </a>
+         
+</nav>
+</body>
+</html>

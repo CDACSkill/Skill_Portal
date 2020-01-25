@@ -1,0 +1,16 @@
+ 
+ span {
+     color:rgb(168, 172, 172);
+ }
+ p {
+    margin-top:0px;
+    margin-bottom:0px;
+ }
+.button {
+   text-align:center;
+   /* padding-top: 30px; */
+}
+
+h2 {
+    padding-left: 16px;
+}

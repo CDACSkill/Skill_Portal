@@ -1,0 +1,49 @@
+
+     <div class="container-fluid" style="width: 90%; margin-top: 100px;">
+      
+        <div class="row ">
+          <div class="col-12">
+            <h1>Training</h1>
+      <div class="float-right">
+       <button class="btn btn-right">Request For Training</button><span>
+      <button id="offer-a-traning" class="btn btn-right" (click)="open(content)">Offer a Training</button></span> 
+          </div>
+        </div>
+      </div>
+
+        <ng-template #request let-c="close" let-d="dismiss">
+            <div class="modal-header">
+                <h4 class="modal-title">Enter requesting Training details</h4>
+            </div>
+        </ng-template>
+
+        <!-- Offer Training-->
+        <ng-template #content let-c="close" let-d="dismiss">
+            <div class="modal-header">
+                <h4 class="modal-title">Offer a Training</h4>
+                <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">  
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+          <div class="modal-body">
+            <app-add-training #form (saveClicked)="c('Cross click')"></app-add-training>
+          </div>
+        </ng-template>
+
+        <div class="row mb-xl-4 mb-lg-4 mb-md-3 mb-sm-2 mb-1">
+          <div class="col-12">
+            <ul id="Training-nav" class="nav nav-tabs justify-content-center" style="cursor:pointer">
+              <li class="nav-item">
+                 <a id="myenrolledtraining" class="nav-link" [routerLink]="[{outlets:{trainingoutlet:['MyEnrolledTraining']}}]" routerLinkActive="active"> 
+                  My Enrolled Training
+                </a>
+              </li>
+              <li class="nav-item">
+                <a id="availabletraining" class="nav-link" [routerLink]="[{outlets:{trainingoutlet:['AvailableTraining']}}]" routerLinkActive="active"> 
+                    Available Training
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+              <router-outlet name="trainingoutlet"></router-outlet>    
